@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+<h4>View patient data</h4>
+<form action='/view' method='POST' class="view-form">
+  <p>Patient id<input type='text' name="p_id"></p>
+  <input type="submit" value='search'>
+</form>
+<div class="view-data">
+  <div class="vv">
+<p>Name : {{ pat }} {{ lname }}</p>
+<p>Blood group : {{ bg }}</p>
+<p>Address : {{ addy }}</p>
+<p>Next of kin : {{ nxt}}</p>
+<p>Genotype : {{ gen}}</p>
+<p>Physical disabilities : {{ phy }}</p>
+
+<p>Treatments : {{ tre }}</p>
+
+</div>
+</div>
+{% endblock %}

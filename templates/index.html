@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>home page</title>
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+  <div class="header">
+  <h1 class="logo">HOSPITAL MANAGEMENT SYSTEM</h1>
+  <h3>Welcome {{ logg }}</h3>
+  <div class="header-right">
+  <li><a href="/create">Create patient Record</a></li>
+  <li><a href="/view">View Patient Record</a></li>
+  <li><a href="/addtreat">Add Treatment</a></li>
+  <li><a href = '/logout'>Logout</a></li>
+</div>
+</div>
+<div class="body">
+{% block content %}
+
+
+  {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+{% block content %}
+<form action="/login" method="POST">
+  <p>User_id : <input type="text" name="regno"></p>
+  <p>password : <input type="text" name="password"></p>
+  <input type="submit" value="Login">
+</form>
+{% endblock %}

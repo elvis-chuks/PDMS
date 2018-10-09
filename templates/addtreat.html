@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h2>add patient treatment</h2>
+<form action='/addtreat' method='POST'>
+  <p>Patient id<input type='text' name="p_id"></p>
+  <p>treatment<input type='text' name="treatm"></p>
+  <p>remarks<input type='text' name="remarks"></p>
+  <input type="submit" value='search'>
+</form>
+{% endblock %}
