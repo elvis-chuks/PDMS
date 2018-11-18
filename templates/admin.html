@@ -11,17 +11,66 @@
 </div>
 </div>
 <div class="sidebar">
-  <div class="side">
+<div class="side">
+  <a href="/view_users" class="sidea">View Users</a>
+  <div class="dropdown">
+    <button class="dropbtn">Manage users</button>
+    <div class="dropdown-content">
+      <a href="/adminregister" class="sidea"> Add Admin user</a>
+      <a href="/register" class="sidea">Add user</a>
+      <a href="/remove" class="sidea"> Remove User</a>
+      <a href="#" class="sidea">Update User</a>
 
-  <p><a href="/adminregister" class="sidea"> Add Admin user</p></li>
-    <p><a href="/register" class="sidea">Add user</a></p>
-  <p><a href="/remove" class="sidea"> Remove User</a></p>
-  <p><a href="#" class="sidea">Update User</a></p>
-  <p><a href="/view_users" class="sidea">View Users</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+<style media="screen">
+  /* Dropdown Button */
+  .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+  }
 
-</div>
-</div>
-<div class="cont">
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+
+<div class="cont" style="margin-top:-100px;">
   {% block content %}
 
   {% endblock %}

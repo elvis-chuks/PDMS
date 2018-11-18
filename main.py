@@ -263,11 +263,8 @@ def view():
             find = patient.find_one({'p_id': request.form['p_id']})
             findt = treatment.find({'p_id': request.form['p_id']})
             #.forEach(function(doc)(print(doc.treatment)))
-            x = []
+            x = ('Date' + ' : ' + doc['date'] + '  '+ 'Treatment' + ' : ' + doc['treatment'] for doc in findt)
 
-            for doc in findt:
-                tr = 'Date' + ' : ' + doc['date'] + '  '+ 'Treatment' + ' : ' + doc['treatment']
-                x.append(tr)
 
 
             if find is None:
@@ -329,22 +326,18 @@ def remove():
             return redirect(url_for('adminpage'))
         return render_template('remove.html')
     return redirect(url_for('login'))
-
+@app.route('/<path:pat>')
+def patients(pat):
+    if 'adminid' in session:
+        return 'hello' + pat
+    return redirect(url_for('login'))
 @app.route("/view_users")
 def view_users():
     if 'adminid' in session:
         user = mongo.db.patientdata
         findu = user.find()
-        patients = []
-        for doc in findu:
-            dicc = 'p_id' + ' : ' + doc['p_id'] + '  '+ 'First name' + ' : ' + doc['First name']
-                    #({
-            #'p_id':doc['p_id'],
-            #'Firstname':doc['First name']
-            #})
-            patients.append(dicc)
-            #patients.append(doc['p_id'])
-            #patients.append(doc['First name'])
+        patients = (doc['p_id'] + '  '+ doc['First name'] for doc in findu)
+
         return render_template('viewusers.html', patients=patients)
 
     return redirect(url_for('login'))

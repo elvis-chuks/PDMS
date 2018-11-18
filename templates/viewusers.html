@@ -1,9 +1,11 @@
 {% extends 'admin.html' %}
-<div class="patients" style="float:right;">
+<div class="patients" >
 {% block content %}
 
 {% for x in patients %}
-  <p>{{ x }}</p>
+ <div class="users" style="padding-left:450px;">
+  <p><a href="{{ x[0:4] }}">{{ x }}</a></p>
+  </div>
 {% endfor %}
 {% endblock %}
 </div>
