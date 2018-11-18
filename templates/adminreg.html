@@ -1,11 +1,12 @@
-{% extends "admin.html" %}
+{% extends 'admin.html' %}
 {% block content %}
-<form action="/register" method="POST">
-  <p>User_id : <input type="text" name="regno"></p>
+<form action="/adminregister" method="POST">
+  <p >Admin_id : <input type="text" name="regno"></p>
   <p>first name : <input type="text" name="fname"></p>
   <p>last name : <input type="text" name="lname"></p>
   <p>office held : <input type="text" name="office"></p>
   <p>password : <input type="text" name="password"></p>
-  <input type="submit" value="Login">
+  <input type="submit" value="Add Admin">
 </form>
+
 {% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'admin.html' %}
+<div class="patients" style="float:right;">
+{% block content %}
+
+{% for x in patients %}
+  <p>{{ x }}</p>
+{% endfor %}
+{% endblock %}
+</div>

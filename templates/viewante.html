@@ -3,27 +3,25 @@
 <h4><a href="/view">View patient data</a></h4>
 <h4><a href="/viewante">View antenatal patient </a></h4>
 <div class="view-form">
-<form action='/view' method='POST' >
+<form action='/viewante' method='POST' >
   <p>Patient id<input type='text' name="p_id"></p>
   <input type="submit" value='search'>
 </form>
 </div>
 <div class="view-data">
   <div class="vv">
+  	<h4>antenatal record</h4>
 <p>Name : {{ pat }} {{ lname }}</p>
-<p>Date of birth : {{ dob }} </p>
-<p>Phone number : {{ phone }}</p>
+<p>Age : {{ age }}</p>
+<p>Religion : {{ religion }}</p>
 <p>Address : {{ addy }}</p>
-<p>Next of kin : {{ nxt}}</p>
-<p>Phone number : {{ nxtno }}</p>
-<p>Relationship : {{ relakin }}</p>
-<p>Address : {{ kinaddy }}</p>
-<p>Occupation : {{ occ }}</p>
-<p>Relations : {{ rela }}</p>
-<p>Treatments :</p>
-{% for x in tre %}
-{{ x }}</br>
-{% endfor %}
+<p>Occupation : {{ occu }}</p>
+<p>Marital status : {{ marstat }}</p>
+<p>Husbands name: {{ husnme }}</p>
+<p>Husbands occupation : {{ husocc }}</p>
+<p>Home town : {{ hmtwn }}</p>
+
+
 
 </div>
 </div>

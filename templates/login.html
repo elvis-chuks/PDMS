@@ -1,8 +1,17 @@
 {% extends 'index.html' %}
 {% block content %}
+<div class="norlog">
 <form action="/login" method="POST">
   <p>User_id : <input type="text" name="regno"></p>
   <p>password : <input type="text" name="password"></p>
   <input type="submit" value="Login">
 </form>
+</div>
+<div class="adlog" style="padding-left:200px;">
+<form action="/admin-login" method="POST" style="float:left; margin-top:-18%; margin-left:8%;">
+  <p>Admin_id : <input type="text" name="regno"></p>
+  <p>Password : <input type = "password" name="password"></p>
+  <input type="submit" value="login">
+</form>
+</div>
 {% endblock %}

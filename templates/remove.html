@@ -1,0 +1,8 @@
+{% extends 'admin.html' %}
+{% block content %}
+<form action="/remove" method="POST">
+  <p>User_id<input type="text" name="user_id"></p>
+  <input type="submit" value="remove">
+</form>
+
+{% endblock %}

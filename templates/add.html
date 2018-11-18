@@ -2,21 +2,32 @@
 <div class="add">
 {% block content %}
 
-<h2>create patient record</h2>
+<h2><a href="/create" style="text-decoration:none;">create patient record</a></h2>
+<h2><a href="/ante" style="text-decoration:none;">Create Ante-natal record</a></h2>
 <form action='/create' method='POST'>
+
+  <div class="leftform">
   <input type="text" name="fname" placeholder="First-Name">
   <input type="text" name="lname" placeholder="Last-name">
-  <input type="text" name="bldgrp" placeholder="Blood group">
-  <input type="text" name="Address" placeholder="Address">
-  <input type="text" name="nxtkin" placeholder="Next of kin">
+  <input type="date" name="date" placeholder="Date of birth">
   <input type="text" name="phone" placeholder="Phone number">
-   <input type="text" name="genotype" placeholder="Genotype">
-  <input type="text" name="phydis" placeholder="physical disabilities">
+  <input type="text" name="Address" placeholder="Address">
+    <input type="text" name="nxtkin" placeholder="Next of kin">
+</div>
+<div class="rightform">
+  <input type="text" name="nxtkinphone" placeholder="Phone number">
+   <input type="text" name="relakin" placeholder="Relation to next of kin">
+  <input type="text" name="relaAddress" placeholder="Address">
+  <input type="text" name="occupation" placeholder="Occupation">
+  <input type="text" name="relations" placeholder="Relations">
+
   <div>
     <input type="radio" id="male" name="gender"><label for="male">Male</label>
     <input type="radio" id="female" name="gender"><label for="female">Female</label>
   </div>
   <input type="submit" value="register">
+</div>
+
 </form>
 {% endblock %}
 </div>

@@ -8,6 +8,7 @@ body{
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
+
   background-color: steelblue;
   padding: 20px 10px;
   position:fixed;
@@ -32,6 +33,16 @@ body{
   border-radius: 4px;
 
 }
+a {
+  color: steelblue;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+
+}
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header h1.logo {
@@ -46,13 +57,19 @@ body{
   background-color: white;
   color: steelblue;
 }
-
+a:hover {
+  background-color: steelblue;
+  color: white;
+}
 /* Style the active/current link*/
 .header a.active {
   background-color: dodgerblue;
   color: white;
 }
-
+a.active {
+  background-color: dodgerblue;
+  color: white;
+}
 /* Float the link section to the right */
 .header-right {
   float: right;
@@ -95,6 +112,7 @@ h3{
   float:right;
   padding:20px;
   margin-top:-50px;
+  padding-right: 100px;
 }
 .view-data{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -115,7 +133,7 @@ p{
 }
 form{
   margin:20px auto;
-  width:300px;
+  width:60%;
   color:steelblue;
 }
 input{
@@ -126,12 +144,27 @@ input{
 input[type="text"]{
   display:block;
   margin-bottom: 10px;
+  width:300px;
+  border:1px solid #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #f1f1f1;
+}
+input[type="date"]{
+  display:block;
+  margin-bottom: 10px;
+  width:300px;
+  border:1px solid #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #f1f1f1;
+}
+input[type="password"]{
+  display:block;
+  margin-bottom: 10px;
   width:100%;
   border:1px solid #f1f1f1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background: #f1f1f1;
 }
-
 input[type="radio"]{
   margin:0px 8px 25px 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -175,4 +208,96 @@ margin-right:30px;
 
 .body{
   margin-top:130px;
+  margin-left: -100px;
+}
+
+.cont{
+  margin-top:150px;
+}
+.leftform{
+width:35%;
+padding-left:100px;
+}
+.rightform{
+  float:right;
+  margin-top:-302px;
+  padding-right: 100px;
+}
+.norlog{
+  width:500px;
+  float:right;
+}
+.adlog{
+  width:500px;
+  float:left;
+  margin-top:100px;
+}
+.first-ante{
+  width:960px;
+}
+#f1{
+  float:left;
+  margin-right: 27px;
+
+}
+#f2{
+
+}
+#f3{
+  margin-top:-150px;
+  float:right;
+}
+#f4{
+  float:left;
+
+}
+#f5{
+  float:right;
+}
+#f6{
+  float:left;
+  margin-right: 27px;
+}
+#f8{
+  margin-right: -160px;
+  float:right;
+  margin-top:-50px;
+}
+
+#f9{
+  float:left;
+
+}
+#f10{
+margin-left: 20px;
+}
+#f11{
+  float:right;
+  margin-right: -150px;
+  margin-top:-255px;
+}
+
+#f12{
+  float:left;
+
+}
+#f13{
+margin-left: 20px;
+}
+#f14{
+  float:right;
+  margin-right: -150px;
+  margin-top:-255px;
+}
+#f15{
+  float:left;
+
+}
+#f16{
+margin-left: 20px;
+}
+#f17{
+  float:right;
+  margin-right: -170px;
+  margin-top:-150px;
 }

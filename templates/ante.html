@@ -1,0 +1,136 @@
+{% extends 'index.html' %}
+{% block content %}
+<h2><a href="/create" style="text-decoration:none;">create patient record</a></h2>
+<h2><a href="/ante" style="text-decoration:none;">Create Ante-natal record</a></h2>
+<div class="anteform">
+
+  <form method='POST' action='/ante'>
+    <div class="first-ante">
+      <div id="f1">
+    <input type="text" placeholder="Surname" name="lname">
+    <input type="text" placeholder="Other names" name="fname">
+    <input type="text" placeholder="Address" name="addy">
+  </div>
+  <div id="f2">
+    <input type="text" placeholder="Home Town" name="hmtn">
+    <input type="text" placeholder="Age" name="age">
+    <input type="text" placeholder="Marital status" name="mst">
+  </div>
+  <div id="f3">
+    <input type="text" placeholder="Religion" name="religion">
+    <input type="text" placeholder="Occupation" name="occu">
+    <input type="text" placeholder="Husbands name" name="hname">
+    <input type="text" placeholder="Husbands occupation" name="hoccu">
+  </div>
+</div>
+<hr style="margin-top:80px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+<div class="second-ante">
+  <h2>PREVIOUS MEDICAL HISTORY</h2>
+  <div id="f4">
+  <input type="text" placeholder="Heart disease" name="hdis">
+  <input type="text" placeholder="Kidney disease" name="kdis">
+  <input type="text" placeholder="Yaws or Syphilis" name="yrs">
+</div>
+<div id="f5">
+  <input type="text" placeholder="Hypertension" name="hyp">
+  <input type="text" placeholder="Diabetes" name="dib">
+  <input type="text" placeholder="Previous operations" name="po">
+  <input type="text" placeholder="Other" name="oth">
+</div>
+</div>
+<hr style="margin-top:220px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+<div class="third-ante">
+  <h2>FAMILY HISTORY</h2>
+  <div id="f6">
+  <input type="text" placeholder="Twins" name="twins">
+</div>
+<div id="f7">
+  <input type="text" placeholder="Malformations" name="mal">
+</div>
+<div id="f8">
+  <input type="text" placeholder="Tuberculosis" name="tub">
+</div>
+
+
+</div>
+<hr style="margin-top:20px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+<div class="fourth-ante">
+  <h2>HISTORY OF PRESENT PREGNANCY</h2>
+  <div id="f9">
+  <input type="date" placeholder="Date of booking" name="dofb">
+  <input type="text" placeholder="L.M.P" name="lmp">
+  <input type="text" placeholder="E.D.D" name="edd">
+  <input type="text" placeholder="Bleeding" name="bleeding">
+  <input type="text" placeholder="Duration in pregnancy in weeks" name="dup">
+</div>
+<div id="f10">
+  <input type="text" placeholder="F.M.F" name="fmf">
+  <input type="text" placeholder="Headache" name="headache">
+  <input type="text" placeholder="Vomiting" name="vom">
+  <input type="text" placeholder="Oedema" name="oedema">
+  <input type="text" placeholder="Constipation" name="const">
+</div>
+<div id="f11">
+  <input type="text" placeholder="Urinary Symptoms" name="usymp">
+  <input type="text" placeholder="Jaundice" name="jaund">
+  <input type="text" placeholder="Other Symptoms" name="osymp">
+  <input type="text" placeholder="Vaginal Discharge" name="Vadis">
+  <input type="text" placeholder="Taken by" name="taby">
+</div>
+<hr style="margin-top:20px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+</div>
+<div class="fifth-ante">
+  <h2>PRIMARY EXAMINATION</h2>
+  <div id="f12">
+  <input type="text" placeholder="Made by" name="mdby">
+  <input type="date" placeholder="Date" name="pdate">
+  <input type="text" placeholder="Height" name="height">
+  <input type="text" placeholder="Weight" name="weight">
+  <input type="text" placeholder="B.P" name="bp">
+
+  <input type="text" placeholder="S/B" name="sb">
+  <input type="text" placeholder="General Condition" name="gc">
+  </div>
+<div id="f13">
+  <input type="text" placeholder="Malnutrition" name="mal">
+  <input type="text" placeholder="Clinical Anaemia" name="clia">
+  <input type="text" placeholder="C.V.S" name="cvs">
+  <input type="text" placeholder="R.S" name="rs">
+  <input type="text" placeholder="Liver" name="liv">
+</div>
+<div id="f14">
+  <input type="text" placeholder="Spleen" name="spleen">
+  <input type="text" placeholder="Breasts" name="breasts">
+  <input type="text" placeholder="Height of funds" name="hof">
+  <input type="text" placeholder="Abnormalities" name="abnor">
+  <input type="text" placeholder="Vaginal Examination" name="vage">
+  <input type="text" placeholder="Urine protien" name="up">
+  <input type="text" placeholder="Gluclose" name="glu">
+</div>
+<hr style="margin-top:50px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+</div>
+<div class="sixth-ante">
+  <h2>Others</h2>
+  <div id="f15">
+  <input type="text" placeholder="Pelvic Assesment Scan" name="pas">
+  <input type="date" placeholder="Date" name="dap">
+  <input type="text" placeholder="inlet" name="inlet">
+  </div>
+  <div id="fi6">
+  <input type="text" placeholder="Promontory reached at" name="pra">
+  <input type="text" placeholder="Not reached" name="nr">
+  <input type="text" placeholder="Cavity" name="cav">
+  </div>
+  <div id="f17">
+  <input type="text" placeholder="Outlet" name="outlet">
+  <input type="text" placeholder="Soft tissues" name="st">
+  <input type="text" placeholder="Accessed by" name="asb">
+  </div>
+  <hr style="margin-top:50px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+  </div>
+  <div class="sub">
+    <input type="submit" value="register">
+    </div>
+  </form>
+</div>
+{% endblock %}

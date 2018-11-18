@@ -1,0 +1,28 @@
+
+<head>
+  <link rel="stylesheet" type="text/css" href="static/css/admin.css">
+</head>
+<div class="header">
+  <div class="headd">
+    <h3><a href="/adminpage">Admin panel</a></h3>
+    </div>
+    <div class="nav">
+      <a href="/adminlogout">Logout</a>
+</div>
+</div>
+<div class="sidebar">
+  <div class="side">
+
+  <p><a href="/adminregister" class="sidea"> Add Admin user</p></li>
+    <p><a href="/register" class="sidea">Add user</a></p>
+  <p><a href="/remove" class="sidea"> Remove User</a></p>
+  <p><a href="#" class="sidea">Update User</a></p>
+  <p><a href="/view_users" class="sidea">View Users</a></p>
+
+</div>
+</div>
+<div class="cont">
+  {% block content %}
+
+  {% endblock %}
+</div>
