@@ -1,7 +1,8 @@
 {% extends 'index.html' %}
 {% block content %}
 
-<h2>add patient treatment</h2>
+<h2><a href="/addtreat">Add patient treatment</a></h2>
+<h2><a href="/anteexe">Ante-natal examination</a></h2>
 <form action='/addtreat' method='POST'>
   <p>Date : <input type="date" name="date"></p>
   <p>Patient id : <input type='text' name="p_id"></p>

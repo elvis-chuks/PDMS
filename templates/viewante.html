@@ -20,8 +20,29 @@
 <p>Husbands name: {{ husnme }}</p>
 <p>Husbands occupation : {{ husocc }}</p>
 <p>Home town : {{ hmtwn }}</p>
+<h2>Antenatal examination</h2>
+<table style="">
+  <tr>
+    <th>Patient ID</th>
+    <th>Height and funds</th>
+    <th>Presentation and lie</th>
+    <th>Relation of P.P to Brim</th>
+    <th>Foetal heart</th>
+    <th>Urine</th>
+    <th>Weight</th>
+    <th>B.p</th>
+    <th>H.b</th>
+    <th>Oedema</th>
+    <th>Remarks and advice</th>
+    <th>Treatment</th>
+    <th>Next visit</th>
+  </tr>
 
-
+  {%for doc in y %}
+    <tr>{{ doc['date']}}</tr>
+  {% endfor %}
+  {{ y }}
+</table>
 
 </div>
 </div>

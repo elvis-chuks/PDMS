@@ -4,6 +4,7 @@ from wtforms.validators import Email, Length, InputRequired
 from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import webview
+import datetime
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'hdbms'
 app.config['MONGO_URI'] = 'mongodb://elvis:elvischuks@127.0.0.1:27017/hdbms'
@@ -234,6 +235,8 @@ def viewante():
         if request.method == 'POST':
             antep =mongo.db.antenatal
             antexe = mongo.db.antenatalexam
+            finde = antexe.find({'p_id':request.form['p_id']})
+            y = (egg for egg in finde)
             find = antep.find_one({'p_id': request.form['p_id']})
             if find is None:
                 return redirect(url_for('viewante'))
@@ -247,7 +250,7 @@ def viewante():
             occu = find['occupation']
             husnme = find['husbands name']
             husocc = find['husbands occupation']
-            return render_template('viewante.html', pat=pat,lname=lname,addy=addy,hmtwn=hmtwn,age=age,marstat=marstat,religion=religion,husocc=husocc,occu=occu,husnme=husnme)
+            return render_template('viewante.html', y=y,pat=pat,lname=lname,addy=addy,hmtwn=hmtwn,age=age,marstat=marstat,religion=religion,husocc=husocc,occu=occu,husnme=husnme)
         return render_template('viewante.html')
     return redirect(url_for('login'))
 @app.route('/view', methods=['GET', 'POST'])
@@ -260,8 +263,10 @@ def view():
         if request.method == 'POST':
             patient = mongo.db.patientdata
             treatment = mongo.db.treatment
+            exam = mongo.db.antenatalexam
             find = patient.find_one({'p_id': request.form['p_id']})
             findt = treatment.find({'p_id': request.form['p_id']})
+
             #.forEach(function(doc)(print(doc.treatment)))
             x = ('Date' + ' : ' + doc['date'] + '  '+ 'Treatment' + ' : ' + doc['treatment'] for doc in findt)
 
@@ -312,7 +317,35 @@ def addtreat():
 
         return render_template('addtreat.html', logg=logg)
     return redirect(url_for('login'))
+@app.route('/anteexe', methods=['GET', 'POST'])
+def anteexe():
+    if 'regno' in session:
+        user = mongo.db.users
 
+        if request.method == 'POST':
+            exam = mongo.db.antenatalexam
+            x = datetime.datetime.now()
+
+            exam.insert({
+            "regno": session['regno'],
+            "p_id":request.form['p_id'],
+            "date":x,
+            "presentation and lie":request.form['pal'],
+            "Relation of PP to Brim":request.form['rpp'],
+            "Feotal heart":request.form['fh'],
+            "Urine":request.form['urine'],
+            "Weight":request.form['weight'],
+            "BP":request.form['bp'],
+            "HB":request.form['hb'],
+            "Oedema":request.form['oed'],
+            "remarks":request.form['rem'],
+            "treatment":request.form['treat'],
+            "next visit":request.form['nxtv']
+
+            })
+            return redirect(url_for('anteexe'))
+        return render_template('anteexe.html')
+    return redirect(url_for('login'))
 
 #ROUTE FOR REMOVING USERS
 @app.route('/remove', methods=['GET', 'POST'])
@@ -329,7 +362,11 @@ def remove():
 @app.route('/<path:pat>')
 def patients(pat):
     if 'adminid' in session:
-        return 'hello' + pat
+        patient = mongo.db.patientdata
+        treatment = mongo.db.treatment
+        findp = patient.find_one({"p_id":pat})
+        name = findp['First name']
+        return render_template('patients.html', name=name)
     return redirect(url_for('login'))
 @app.route("/view_users")
 def view_users():
