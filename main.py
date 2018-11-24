@@ -330,6 +330,7 @@ def anteexe():
             "regno": session['regno'],
             "p_id":request.form['p_id'],
             "date":x,
+            "haf":request.form['haf'],
             "presentation and lie":request.form['pal'],
             "Relation of PP to Brim":request.form['rpp'],
             "Feotal heart":request.form['fh'],

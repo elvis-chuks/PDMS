@@ -39,9 +39,23 @@
   </tr>
 
   {%for doc in y %}
-    <tr>{{ doc['date']}}</tr>
+  <tr>
+    <td>{{ doc['date']}}</td>
+    <td>{{ doc['haf'] }}</td>
+    <td>{{ doc['presentation and lie']}}</td>
+    <td>{{ doc['Relation of PP to Brim']}}</td>
+    <td>{{ doc['Feotal heart']}}</td>
+    <td>{{ doc ['Urine'] }}</td>
+    <td>{{ doc ['Weight'] }}</td>
+    <td>{{ doc ['BP'] }}</td>
+    <td>{{ doc ['HB'] }}</td>
+    <td>{{ doc ['Oedema'] }}</td>
+    <td>{{ doc ['remarks'] }}</td>
+    <td>{{ doc ['treatment'] }}</td>
+    <td>{{ doc ['next visit'] }}</td>
+  </tr>
   {% endfor %}
-  {{ y }}
+
 </table>
 
 </div>
