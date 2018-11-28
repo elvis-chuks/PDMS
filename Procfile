@@ -1,2 +1,2 @@
-web: gunicorn apply:app
+web: gunicorn main:app
 worker: python appi.py
