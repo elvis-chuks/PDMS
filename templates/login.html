@@ -1,17 +1,27 @@
 {% extends 'index.html' %}
 {% block content %}
-<div class="norlog">
-<form action="/login" method="POST">
-  <p>User_id : <input type="text" name="regno"></p>
-  <p>password : <input type="text" name="password"></p>
-  <input type="submit" value="Login">
+
+<div class="adlog">
+
+  <div class="wrap">
+
+<form action="/admin-login" method="POST" style="float:left; margin-top:-18%; margin-left:8%;">
+   <input placeholder="Admin_id" type="text" name="regno"><br><br>
+   <input placeholder="Password" type = "password" name="password"><br><br>
+  <input type="submit" value="Admin-login">
 </form>
 </div>
-<div class="adlog" style="padding-left:200px;">
-<form action="/admin-login" method="POST" style="float:left; margin-top:-18%; margin-left:8%;">
-  <p>Admin_id : <input type="text" name="regno"></p>
-  <p>Password : <input type = "password" name="password"></p>
-  <input type="submit" value="login">
+</div>
+
+
+<div class="norlog">
+  <div class="wrap">
+
+<form action="/login" method="POST">
+<input placeholder="User_id" type="text" name="regno"><br><br>
+<input placeholder="Password" type="password" name="password"><br><br>
+  <input type="submit" value="Staff-login">
 </form>
+</div>
 </div>
 {% endblock %}

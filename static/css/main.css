@@ -3,301 +3,319 @@ body{
 
   font:1em/1.5 sans-serif;
 }
-
-
-/* Style the header with a grey background and some padding */
-.header {
-  overflow: hidden;
-
-  background-color: steelblue;
-  padding: 20px 10px;
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:10%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-
-}
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-
-}
-a {
-  color: steelblue;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-
-}
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header h1.logo {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top:-10px;
-  color:white;
-}
-
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: white;
-  color: steelblue;
-}
-a:hover {
-  background-color: steelblue;
-  color: white;
-}
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-/* Float the link section to the right */
-.header-right {
-  float: right;
-  margin-top:-80px;
-  margin-right:-100px;
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
-}
-h1{
-  font-size: 30px;
-  color: steelblue;
-
-}
-h2{
-  text-align: center;
-  font-size: 20px;
-  color: steelblue;
-}
-h4{
-  text-align: center;
-  font-size: 20px;
-  color: steelblue;
-}
-h3{
-
-  font-size: 20px;
-  color: white;
-}
-.view-form{
-  float:right;
-  padding:20px;
-  margin-top:-50px;
-  padding-right: 100px;
-}
-.view-data{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-left: 10%;
-  margin-top: 0px;
-  width:60%;
-}
-.vv{
-    padding:0 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-p{
-  color: #555;
-}
-.nav{
-  float:right;
-}
-form{
-  margin:20px auto;
-  width:60%;
-  color:steelblue;
-}
-input{
-  padding:10px;
-  font-size: inherit;
-
-}
-input[type="text"]{
-  display:block;
-  margin-bottom: 10px;
-  width:300px;
-  border:1px solid #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: #f1f1f1;
-}
-input[type="date"]{
-  display:block;
-  margin-bottom: 10px;
-  width:300px;
-  border:1px solid #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: #f1f1f1;
-}
-input[type="password"]{
-  display:block;
-  margin-bottom: 10px;
-  width:100%;
-  border:1px solid #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: #f1f1f1;
-}
-input[type="radio"]{
-  margin:0px 8px 25px 18px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-input[type="radio"]:first-child{
-  margin-left: 0;
-}
-input[type="submit"]{
-  width:300px;
-  height:45px;
-  border:none;
-  background:steelblue;
-  color:white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-input[type="submit"]:focus{
-  width:300px;
-  height:45px;
-  border:none;
-  background:white;
-  color:steelblue;
-}
-input:focus{
-  background: white;
-}
-input[type="radio"]:checked + label{
-  font-weight:bold;
-  font-size:18px;
-}
-li{
-display:inline;
-padding-left:;
-margin-right:30px;
-}
 .header{
-  margin-top:0px;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:50px;
+  background-color:#565659;
 }
-.nav{
-  margin:auto;
+.header .logo{
+  color:white;
+}
+.header .header-right{
+  float: right;
+  padding-right:100px;
+  margin-top:-68px;
+  display: none;
 }
 
-.body{
-  margin-top:130px;
-  margin-left: -100px;
+.header .header-right a{
+text-decoration: none;
+color:white;
+padding:20px;
+
+}
+.header .header-right i{
+  color:white;
 }
 
-.cont{
-  margin-top:150px;
-}
-.leftform{
-width:35%;
-padding-left:100px;
-}
-.rightform{
-  float:right;
-  margin-top:-302px;
-  padding-right: 100px;
-}
 .norlog{
-  width:500px;
-  float:right;
+margin-top:80px;
+position: relative;
+margin-left: -500px;
+width:400px;
+height:300px;
+background-color:white;
+box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+
+}
+.norlog .wrap{
+  padding:45px;
+}
+.adlog .wrap{
+  padding:45px;
+  margin-top:58px;
+  margin-left: -20px;
+}
+.wrap input[type=text]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=password]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=submit]{
+  width:300px;
+  height:40px;
+  background-color: #565659;
+  border:none;
+  color:white;
 }
 .adlog{
-  width:500px;
-  float:left;
-  margin-top:100px;
+  margin-top:85px;
+  position: relative;
+  width:400px;
+  height:300px;
+  background-color:white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
-.first-ante{
-  width:960px;
+@media only screen and (min-width: 768px) {
+/* Dropdown Button */
+.dropbtn {
+    background-color:#565659;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
 }
-#f1{
-  float:left;
-  margin-right: 27px;
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.header .header-right .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #fff;}
+
+
+
+.header{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:50px;
+  background-color:#565659;
+}
+.header .logo{
+  color:white;
+}
+.header .header-right{
+  float: right;
+  padding-right:100px;
+  margin-top:-68px;
+  display: block;
+}
+.header .header-right a{
+text-decoration: none;
+color:white;
+padding:20px;
 
 }
-#f2{
-
+.header .header-right i{
+  color:white;
 }
-#f3{
-  margin-top:-150px;
+
+.norlog{
+margin-top:80px;
+float:left;
+width:400px;
+height:300px;
+background-color:white;
+box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+margin-left:190px;
+}
+.norlog .wrap{
+  padding:45px;
+}
+.adlog .wrap{
+  padding:45px;
+  margin-top:58px;
+  margin-left: -20px;
+}
+.wrap input[type=text]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=password]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=submit]{
+  width:300px;
+  height:40px;
+  background-color: #565659;
+  border:none;
+  color:white;
+}
+.adlog{
+  margin-top:85px;
   float:right;
+  width:400px;
+  height:300px;
+  background-color:white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  margin-right:190px;
 }
-#f4{
-  float:left;
+}
+
+@media only screen and (min-width: 600px) {
+  .dropbtn {
+      background-color:#565659;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      height:50px;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 250px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+.header .header-right  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  }
+.header{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:50px;
+  background-color:#565659;
+}
+.header .logo{
+  color:white;
+}
+.header .header-right{
+  float: right;
+  padding-right:100px;
+  margin-top:-68px;
+}
+.header .header-right a{
+text-decoration: none;
+color:white;
+padding:20px;
 
 }
-#f5{
+.header .header-right i{
+  color:white;
+}
+
+.norlog{
+margin-top:80px;
+float:left;
+width:400px;
+height:300px;
+background-color:white;
+box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+margin-left:190px;
+}
+.norlog .wrap{
+  padding:45px;
+}
+.adlog .wrap{
+  padding:45px;
+  margin-top:58px;
+  margin-left: -20px;
+}
+.wrap input[type=text]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=password]{
+  width:300px;
+  height:40px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  border:none;
+  background-color: #ddd;
+}
+.wrap input[type=submit]{
+  width:300px;
+  height:40px;
+  background-color: #565659;
+  border:none;
+  color:white;
+}
+.adlog{
+  margin-top:85px;
   float:right;
+  width:400px;
+  height:300px;
+  background-color:white;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  margin-right:190px;
 }
-#f6{
-  float:left;
-  margin-right: 27px;
-}
-#f8{
-  margin-right: -160px;
-  float:right;
-  margin-top:-50px;
-}
-
-#f9{
-  float:left;
-
-}
-#f10{
-margin-left: 20px;
-}
-#f11{
-  float:right;
-  margin-right: -150px;
-  margin-top:-255px;
-}
-
-#f12{
-  float:left;
-
-}
-#f13{
-margin-left: 20px;
-}
-#f14{
-  float:right;
-  margin-right: -150px;
-  margin-top:-255px;
-}
-#f15{
-  float:left;
-
-}
-#f16{
-margin-left: 20px;
-}
-#f17{
-  float:right;
-  margin-right: -170px;
-  margin-top:-150px;
 }

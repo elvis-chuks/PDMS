@@ -5,13 +5,21 @@
 </head>
 <body>
   <div class="header">
-  <h1 class="logo">HOSPITAL MANAGEMENT SYSTEM</h1>
-  <h3>Welcome {{ logg }}</h3>
+  <h4 class="logo">Dashboard</h4>
+
   <div class="header-right">
-  <li><a href="/create">Create patient Record</a></li>
-  <li><a href="/view">View Patient Record</a></li>
-  <li><a href="/addtreat">Add Treatment</a></li>
-  <li><a href = '/logout'>Logout</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">Patients</button>
+      <div class="dropdown-content">
+      <a href="/create">Create Patient Record</a>
+      <a href="/ante">Create Ante-natal Record</a>
+      </div>
+    </div>
+
+  <a href="/view">View</a>
+  <a href="/addtreat">Treatment</a>
+  <i>Howdy {{ logg }}</i>
+  <a href = '/logout'>Logout</a>
 </div>
 </div>
 <div class="body">
