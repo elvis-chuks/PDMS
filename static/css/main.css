@@ -34,7 +34,7 @@ padding:20px;
 
 .norlog{
 margin-top:80px;
-position: relative;
+
 margin-left: -500px;
 width:400px;
 height:300px;
@@ -73,7 +73,7 @@ box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 .adlog{
   margin-top:85px;
-  position: relative;
+
   width:400px;
   height:300px;
   background-color:white;
