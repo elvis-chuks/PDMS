@@ -6,8 +6,8 @@ import random
 import webview
 import datetime
 app = Flask(__name__)
-app.config['MONGO_DBNAME'] = 'hdbms'
-app.config['MONGO_URI'] = 'mongodb://elvis:elvischuks@127.0.0.1:27017/hdbms'
+app.config['MONGO_DBNAME'] = 'heroku_8cscwvjn'
+app.config['MONGO_URI'] = 'mongodb://elvis:123elvischuks@dbh54.mlab.com:27547/heroku_8cscwvjn'
 mongo = PyMongo(app)
 
 
