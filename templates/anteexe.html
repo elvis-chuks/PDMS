@@ -1,46 +1,26 @@
 {% extends 'index.html' %}
 {% block content %}
 <div class="anteexe">
-  <table style="width:30%">
-    <tr>
-      <th>Patient ID</th>
-      <th>Height and funds</th>
-      <th>Presentation and lie</th>
-      <th>Relation of P.P to Brim</th>
-      <th>Foetal heart</th>
-      <th>Urine</th>
-      <th>Weight</th>
-      <th>B.p</th>
-      <th>H.b</th>
-      <th>Oedema</th>
-      <th>Remarks and advice</th>
-      <th>Treatment</th>
-      <th>Next visit</th>
-    </tr>
-    <tr>
-  <form method="post" action="/anteexe">
-  <td>  <input style="width:40px;"type="text" placeholder="Patient id" name="p_id"></td>
-  <td>  <input style="width:40px;"placeholder="Height and funds" name="haf" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Presentation and lie" name="pal" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Relation of P.P to Brim" name="rpp" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Feotal heart" name="fh" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Urine" name="urine" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Weight" name="weight" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="B.P" name="bp" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="H.B" name="hb" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Oedema" name="oed" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Remarks and advice" name="rem" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Treatment" name="treat" type="text"></td>
-  <td>  <input style="width:40px;"placeholder="Next visit" name="nxtv" type="text"></td>
-    <input type="submit" value="submit" >
-  </form>
-  </tr>
-</table>
+  <h3>Antenatal Examination</h3>
+<form method="post" action="/anteexe">
+<input type="text" placeholder="Patient id" name="p_id">
+<input placeholder="Height and funds" name="haf" type="text">
+<input placeholder="Presentation and lie" name="pal" type="text">
+<input placeholder="Relation of P.P to Brim" name="rpp" type="text">
+<input placeholder="Feotal heart" name="fh" type="text">
+<input placeholder="Urine" name="urine" type="text">
+<input placeholder="Weight" name="weight" type="text">
+<input placeholder="B.P" name="bp" type="text">
+<input placeholder="H.B" name="hb" type="text">
+<input placeholder="Oedema" name="oed" type="text">
+<input placeholder="Remarks and advice" name="rem" type="text">
+<input placeholder="Treatment" name="treat" type="text">
+<input placeholder="Next visit" name="nxtv" type="text">
+<input type="submit" value="submit" >
+</form>
+  
 </div>
-<style type="text/css">
-  .anteexe{
-    margin-left:200px;
-  }
-  </style>
+
+
 
 {% endblock %}

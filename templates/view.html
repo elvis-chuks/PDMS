@@ -1,30 +1,32 @@
 {% extends 'index.html' %}
 {% block content %}
-<h4><a href="/view">View patient data</a></h4>
-<h4><a href="/viewante">View antenatal patient </a></h4>
+<div class="vieww">
 <div class="view-form">
+	
 <form action='/view' method='POST' >
-  <p>Patient id<input type='text' name="p_id"></p>
+	<h3>View patient data</h3>
+  <input type='text' placeholder="Patient id" name="p_id">
   <input type="submit" value='search'>
 </form>
 </div>
 <div class="view-data">
-  <div class="vv">
-<p>Name : {{ pat }} {{ lname }}</p>
-<p>Date of birth : {{ dob }} </p>
-<p>Phone number : {{ phone }}</p>
-<p>Address : {{ addy }}</p>
-<p>Next of kin : {{ nxt}}</p>
-<p>Phone number : {{ nxtno }}</p>
-<p>Relationship : {{ relakin }}</p>
-<p>Address : {{ kinaddy }}</p>
-<p>Occupation : {{ occ }}</p>
-<p>Relations : {{ rela }}</p>
-<p>Treatments :</p>
+ <div class="vv">
+<p><strong>Name</strong> : {{ pat }} {{ lname }}</p>
+<p><strong>Date of birth</strong> : {{ dob }} </p>
+<p><strong>Phone number</strong> : {{ phone }}</p>
+<p><strong>Address</strong> : {{ addy }}</p>
+<p><strong>Next of kin</strong> : {{ nxt}}</p>
+<p><strong>Phone number</strong> : {{ nxtno }}</p>
+<p><strong>Relationship</strong> : {{ relakin }}</p>
+<p><strong>Address</strong> : {{ kinaddy }}</p>
+<p><strong>Occupation</strong> : {{ occ }}</p>
+<p><strong>Relations</strong> : {{ rela }}</p>
+<p><strong>Treatments</strong> :</p>
 {% for x in tre %}
 {{ x }}</br>
 {% endfor %}
 
+</div>
 </div>
 </div>
 {% endblock %}

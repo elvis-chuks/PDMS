@@ -1,13 +1,14 @@
 {% extends 'index.html' %}
 {% block content %}
 
-<h2><a href="/addtreat">Add patient treatment</a></h2>
-<h2><a href="/anteexe">Ante-natal examination</a></h2>
+<div class="addtreat">
+	<h3>Add treatment</h3>
 <form action='/addtreat' method='POST'>
-  <p>Date : <input type="date" name="date"></p>
-  <p>Patient id : <input type='text' name="p_id"></p>
-  <p>treatment : <input type='text' name="treatm"></p>
-  <p>remarks : <input type='text' name="remarks"></p>
+  <input type="date" placeholder =" Date " name="date"><br>
+  <input type='text'  placeholder =" P_ID "  name="p_id"><br>
+  <input type='text'  placeholder =" Treatment " name="treatm"><br>
+  <input type='text'  placeholder =" Remarks " name="remarks"><br>
   <input type="submit" value='Add Treatment'>
 </form>
+</div>
 {% endblock %}

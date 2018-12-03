@@ -1,87 +1,76 @@
 {% extends 'index.html' %}
 {% block content %}
-<h2><a href="/create" style="text-decoration:none;">create patient record</a></h2>
-<h2><a href="/ante" style="text-decoration:none;">Create Ante-natal record</a></h2>
+<h2>create patient record</h2>
 <div class="anteform">
 
-  <form method='POST' action='/ante'>
-    <div class="first-ante">
-      <div id="f1">
+  <form method='POST' id="regForm" action='/ante'>
+    <div class="tab">
+     
     <input type="text" placeholder="Surname" name="lname">
     <input type="text" placeholder="Other names" name="fname">
     <input type="text" placeholder="Address" name="addy">
-  </div>
-  <div id="f2">
+ 
     <input type="text" placeholder="Home Town" name="hmtn">
     <input type="text" placeholder="Age" name="age">
     <input type="text" placeholder="Marital status" name="mst">
-  </div>
-  <div id="f3">
+  
+  
     <input type="text" placeholder="Religion" name="religion">
     <input type="text" placeholder="Occupation" name="occu">
     <input type="text" placeholder="Husbands name" name="hname">
     <input type="text" placeholder="Husbands occupation" name="hoccu">
-  </div>
+ 
 </div>
-<hr style="margin-top:80px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-<div class="second-ante">
+
+<div class="tab">
   <h2>PREVIOUS MEDICAL HISTORY</h2>
-  <div id="f4">
+
   <input type="text" placeholder="Heart disease" name="hdis">
   <input type="text" placeholder="Kidney disease" name="kdis">
   <input type="text" placeholder="Yaws or Syphilis" name="yrs">
-</div>
-<div id="f5">
+
   <input type="text" placeholder="Hypertension" name="hyp">
   <input type="text" placeholder="Diabetes" name="dib">
   <input type="text" placeholder="Previous operations" name="po">
   <input type="text" placeholder="Other" name="oth">
 </div>
-</div>
-<hr style="margin-top:220px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-<div class="third-ante">
+
+
+<div class="tab">
   <h2>FAMILY HISTORY</h2>
-  <div id="f6">
+
   <input type="text" placeholder="Twins" name="twins">
-</div>
-<div id="f7">
+
+
   <input type="text" placeholder="Malformations" name="mal">
-</div>
-<div id="f8">
-  <input type="text" placeholder="Tuberculosis" name="tub">
-</div>
 
-
+<input type="text" placeholder="Tuberculosis" name="tub">
 </div>
-<hr style="margin-top:20px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-<div class="fourth-ante">
+<div class="tab">
   <h2>HISTORY OF PRESENT PREGNANCY</h2>
-  <div id="f9">
+ 
   <input type="date" placeholder="Date of booking" name="dofb">
   <input type="text" placeholder="L.M.P" name="lmp">
   <input type="text" placeholder="E.D.D" name="edd">
   <input type="text" placeholder="Bleeding" name="bleeding">
   <input type="text" placeholder="Duration in pregnancy in weeks" name="dup">
-</div>
-<div id="f10">
+
   <input type="text" placeholder="F.M.F" name="fmf">
   <input type="text" placeholder="Headache" name="headache">
   <input type="text" placeholder="Vomiting" name="vom">
   <input type="text" placeholder="Oedema" name="oedema">
   <input type="text" placeholder="Constipation" name="const">
-</div>
-<div id="f11">
+
   <input type="text" placeholder="Urinary Symptoms" name="usymp">
   <input type="text" placeholder="Jaundice" name="jaund">
   <input type="text" placeholder="Other Symptoms" name="osymp">
   <input type="text" placeholder="Vaginal Discharge" name="Vadis">
   <input type="text" placeholder="Taken by" name="taby">
 </div>
-<hr style="margin-top:20px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-</div>
-<div class="fifth-ante">
+
+<div class="tab">
   <h2>PRIMARY EXAMINATION</h2>
-  <div id="f12">
+
   <input type="text" placeholder="Made by" name="mdby">
   <input type="date" placeholder="Date" name="pdate">
   <input type="text" placeholder="Height" name="height">
@@ -90,15 +79,13 @@
 
   <input type="text" placeholder="S/B" name="sb">
   <input type="text" placeholder="General Condition" name="gc">
-  </div>
-<div id="f13">
+
   <input type="text" placeholder="Malnutrition" name="mal">
   <input type="text" placeholder="Clinical Anaemia" name="clia">
   <input type="text" placeholder="C.V.S" name="cvs">
   <input type="text" placeholder="R.S" name="rs">
   <input type="text" placeholder="Liver" name="liv">
-</div>
-<div id="f14">
+
   <input type="text" placeholder="Spleen" name="spleen">
   <input type="text" placeholder="Breasts" name="breasts">
   <input type="text" placeholder="Height of funds" name="hof">
@@ -107,30 +94,199 @@
   <input type="text" placeholder="Urine protien" name="up">
   <input type="text" placeholder="Gluclose" name="glu">
 </div>
-<hr style="margin-top:50px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
-</div>
-<div class="sixth-ante">
+
+<div class="tab">
   <h2>Others</h2>
-  <div id="f15">
+  
   <input type="text" placeholder="Pelvic Assesment Scan" name="pas">
   <input type="date" placeholder="Date" name="dap">
   <input type="text" placeholder="inlet" name="inlet">
-  </div>
-  <div id="fi6">
+
   <input type="text" placeholder="Promontory reached at" name="pra">
   <input type="text" placeholder="Not reached" name="nr">
   <input type="text" placeholder="Cavity" name="cav">
-  </div>
-  <div id="f17">
+
   <input type="text" placeholder="Outlet" name="outlet">
   <input type="text" placeholder="Soft tissues" name="st">
   <input type="text" placeholder="Accessed by" name="asb">
   </div>
-  <hr style="margin-top:50px; width:960px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+ 
+         
+
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    
   </div>
-  <div class="sub">
-    <input type="submit" value="register">
+
+ <div style="overflow:auto;">
+    <div style="float:right;" >
+
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+    
+<div style="float:left;" >
+ <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+  </div>
+     
     </div>
   </form>
 </div>
+
+<style media="screen">
+    /* Style the form */
+  #regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+#prevBtn{
+    width:100px;
+    height:35px;
+    padding: 10px;
+    font-family: Raleway;
+    border:none;
+    background-color:#565659; 
+    margin-top: 10px;
+    color:white;
+  }
+  #nextBtn{
+    width:100px;
+    height:35px;
+    padding: 10px;
+    font-family: Raleway;
+    border:none;
+    background-color:#565659; 
+    margin-top: 10px;
+    color:white;
+  }
+
+
+  /* Style the input fields */
+  input {
+    padding: 10px;
+    width: 300px;
+    font-size: 17px;
+    font-family: Raleway;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+    border:none;
+    background-color: #ddd;
+    margin-top: 10px;
+  }
+
+
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
+  </style>
+
+  <script type="text/javascript">
+  var currentTab = 0; // Current tab is set to be the first tab (0)
+  showTab(currentTab); // Display the current tab
+
+  function showTab(n) {
+    // This function will display the specified tab of the form ...
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+    // ... and fix the Previous/Next buttons:
+    if (n == 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+      document.getElementById("nextBtn").innerHTML = "Submit";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "Next";
+    }
+    // ... and run a function that displays the correct step indicator:
+    fixStepIndicator(n)
+  }
+
+  function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = document.getElementsByClassName("tab");
+    // Exit the function if any field in the current tab is invalid:
+    if (n == 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentTab].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+      //...the form gets submitted:
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+  }
+
+  function validateForm() {
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      if (y[i].value == "") {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+        // and set the current valid status to false:
+        valid = false;
+      }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+      document.getElementsByClassName("step")[currentTab].className += " finish";
+    }
+    return valid; // return the valid status
+  }
+
+  function fixStepIndicator(n) {
+    // This function removes the "active" class of all steps...
+    var i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+      x[i].className = x[i].className.replace(" active", "");
+    }
+    //... and adds the "active" class to the current step:
+    x[n].className += " active";
+  }
+  </script>
 {% endblock %}
