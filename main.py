@@ -8,6 +8,7 @@ import datetime
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'heroku_8cscwvjn'
 app.config['MONGO_URI'] = 'mongodb://elvis:123elvischuks@dbh54.mlab.com:27547/heroku_8cscwvjn'
+app.secret_key = 'mysecretkeyisakey'
 mongo = PyMongo(app)
 
 
