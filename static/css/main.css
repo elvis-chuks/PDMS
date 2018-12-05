@@ -389,7 +389,8 @@ margin-left:190px;
 }
 .view-form{
   float:right;
-  margin-top: 40px;
+  margin-top:-5px;
+  margin-right:40px;
 }
 .view-data{
   width:100%;
