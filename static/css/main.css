@@ -204,6 +204,14 @@ box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px 10px 10px 10px;
   
 }
+.view-data{
+  width:100%;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+.vv{
+  padding: 10 25px;
+}
 /*************************************/
 @media only screen and (min-width: 768px) {
 
